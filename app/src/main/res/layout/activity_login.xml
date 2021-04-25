@@ -7,7 +7,7 @@
     android:layout_margin="10dp"
     android:background="@drawable/rectangle"
     android:orientation="vertical"
-    android:padding="40dp"
+    android:padding="20dp"
     tools:context=".Login">
 
     <EditText
@@ -114,6 +114,57 @@
         android:textColor="#F7F7F8">
 
     </Button>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal">
+
+
+    <Button
+        android:onClick="showData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp">
+
+    </Button>
+
+    <Button
+        android:onClick="showData_regi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Show_regi"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp">
+
+    </Button>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+        <Button
+            android:onClick="updateData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="update data"
+            />
+
+        <Button
+            android:onClick="deleteData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Delete data"
+            />
+
+    </LinearLayout>
 
 
 </LinearLayout>

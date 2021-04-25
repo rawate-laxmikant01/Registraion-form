@@ -10,6 +10,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,7 +21,7 @@ import android.widget.Toolbar;
 
 public class Login extends AppCompatActivity {
 
-    private  EditText email,password;
+    EditText email,password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +42,6 @@ public class Login extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu,menu);
-
         return true;
     }
 
@@ -59,32 +59,46 @@ public class Login extends AppCompatActivity {
                 finish();
                 break;
         }
-
-
         return super.onOptionsItemSelected(item);
     }
 
     public void logIn_now(View view) {
-        String Email=email.getText().toString().trim();
-        String pass=password.getText().toString().trim();
+        String Username=email.getText().toString().trim();
+        String Password=password.getText().toString().trim();
 
-        DbHelper dbHelper=new DbHelper(this);
+        //object created for Database class DbHelper
 
-        SQLiteDatabase db=dbHelper.getWritableDatabase();
+        DbHelper dbHelper = new DbHelper(this);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
 
-        ContentValues values =new ContentValues();
-        values.put("username",Email);
-        values.put("passwrod",pass);
+        //content  values is used to put values that we want to put in the table
+        ContentValues values = new ContentValues();
+        values.put("username", Username);
+        values.put("password", Password);
 
-        Long rowId=db.insert("user.login",null,values);
+        long rowId = db.insert("user_login", null, values);
 
-        Log.e("Row Id","*********************"+rowId);
+        Log.e("Row Id", "**********" + rowId);
+        Toast.makeText(this, " Data Inserted Sucessfully\n" + Username + "\n " + Password + "\n " + rowId, Toast.LENGTH_LONG).show();
+    }
 
-        Toast.makeText(this, "Data Inserted Successfully \n" + Email +"\n"+pass+"\n"+rowId, Toast.LENGTH_SHORT).show();
+    public void showData(View view) {
 
+        startActivity(new Intent(Login.this,Recyclerview_activity.class));
 
+      //  Toast.makeText(this, ""+ password, Toast.LENGTH_SHORT).show();
+    }
 
+    public void showData_regi(View view) {
+        startActivity(new Intent(Login.this,recyclerview_registration_activity.class));
+    }
 
+    public void updateData(View view) {
 
+        startActivity(new Intent(Login.this,update_db.class));
+    }
+
+    public void deleteData(View view) {
+        startActivity(new Intent(Login.this,deletedata_db.class));
     }
 }
