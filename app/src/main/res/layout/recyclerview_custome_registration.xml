@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Registration_Data">
+
+    </TextView>
+ <View
+     android:layout_marginTop="10dp"
+     android:layout_width="match_parent"
+     android:layout_marginBottom="10dp"
+     android:layout_height="3dp">
+
+ </View>
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="horizontal">
+     <TextView
+         android:id="@+id/reg_cust_fullname"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:text="fullname"
+         android:textSize="24dp">
+
+     </TextView>
+     <TextView
+         android:id="@+id/reg_cust_midname"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:text="midname"
+         android:textSize="24dp">
+
+     </TextView>
+     <TextView
+         android:id="@+id/reg_cust_lastname"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_weight="1"
+         android:text="lastname"
+         android:textSize="24dp">
+
+     </TextView>
+
+ </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/reg_cust_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="email"
+            android:textSize="24dp">
+
+        </TextView>
+        <TextView
+            android:id="@+id/reg_cust_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="phone"
+            android:textSize="24dp">
+
+        </TextView>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/reg_cust_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="gender"
+            android:textSize="24dp">
+
+        </TextView>
+        <TextView
+            android:id="@+id/reg_cust_student_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="student_id"
+            android:textSize="24dp">
+
+        </TextView>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/reg_cust_entry_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="entery_year"
+            android:textSize="24dp">
+
+        </TextView>
+        <TextView
+            android:id="@+id/reg_cust_grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="grade"
+            android:textSize="24dp">
+
+        </TextView>
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/reg_cust_sem"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="semister"
+        android:textSize="24dp">
+
+    </TextView>
+
+
+</LinearLayout>
+
+
+
+
