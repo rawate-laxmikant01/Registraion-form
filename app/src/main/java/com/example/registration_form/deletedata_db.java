@@ -19,9 +19,10 @@ public class deletedata_db extends AppCompatActivity {
         setContentView(R.layout.activity_deletedata_db);
 
         name=findViewById(R.id.delete_name);
+        db=new DbHelper(this);
     }
 
-    public void update(View view) {
+    public void delete(View view) {
 
         String deleteName=name.getText().toString().trim();
 

@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-
+                Toast.makeText(MainActivity.this, "ethernity not selecteed", Toast.LENGTH_SHORT).show();
             }
         });
 
